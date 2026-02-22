@@ -1,0 +1,9 @@
+name: Command Workflow
+on: [push]
+jobs:
+  run-shell-commands:
+    runs-on: windows-latest
+    steps:
+      - name: setting an error code
+        run: echo "::error::This is an error message"
+      
