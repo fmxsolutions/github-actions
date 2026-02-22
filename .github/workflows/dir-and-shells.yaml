@@ -1,0 +1,26 @@
+name: Working dir and Shells
+on: [push]
+
+jobs:
+  display-ldir-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display working directory (LINUX)
+        run: |
+            echo "Current working directory: $PWD"
+            echo "Contents of the current directory:"
+            ls -la
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
+  display-wdir-info:
+    runs-on: windows-latest
+    steps:
+      - name: display working directory (WINDOWS)
+        run: |
+            echo "Current working directory: %CD%"
+            echo "Contents of the current directory:"
+            dir
+            echo %GITHUB_SHA%
+            echo %GITHUB_REPOSITORY%
+            echo %GITHUB_WORKSPACE%
