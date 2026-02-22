@@ -6,4 +6,13 @@ jobs:
     steps:
       - name: setting an error code
         run: echo "::error::This is an error message"
+      - name: setting an error code with file, line and column information
+        run: echo "::error::This is an error message,file=app.js,line=1,col=1::This is an error message with file, line and column information"
+      - name: setting a warning code
+        run: echo "::warning::This is a warning message,file=app.js,line=1,col=1::This is a warning message with file, line and column information"
+      - name: setting a debug code
+        run: echo "::debug::This is a debug message,file=app.js,line=1,col=1::This is a debug message with file, line and column information"
+      - name: setting a notice code
+        run: echo "::notice::This is a notice message,file=app.js,line=1,col=1::This is a notice message with file, line and column information" 
+
       
