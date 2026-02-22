@@ -12,4 +12,23 @@ jobs:
           echo "env: "
           echo "node.js version: $(node -v)"
           echo "npm version: $(npm -v)"
-         
+  parallel-job-macOs:
+    runs-on: macos-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello, selfish World!"
+      - name: view OS version
+        run: |
+          echo "OS version:"
+          echo " $(sw_vers -productVersion)"
+  
+  dependent-job:
+      runs-on: windows-latest
+      needs: [run-shell-commands, parallel-job-macOs]
+      steps:
+        - name: echo a string
+          run: echo "Hello, selfish World!"
+        - name: view OS version
+          run: |
+            echo "OS version:"
+            wmic os get Caption, Version, BuildNumber
