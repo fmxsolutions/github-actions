@@ -31,4 +31,4 @@ jobs:
         - name: view OS version
           run: |
             echo "OS version:"
-            wmic os get Caption, Version, BuildNumber
+            Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber
