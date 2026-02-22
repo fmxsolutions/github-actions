@@ -18,9 +18,9 @@ jobs:
     steps:
       - name: display working directory (WINDOWS)
         run: |
-            echo "Current working directory: %CD%"
+            echo "Current working directory: $(Get-Location)"
             echo "Contents of the current directory:"
             dir
-            echo %GITHUB_SHA%
-            echo %GITHUB_REPOSITORY%
-            echo %GITHUB_WORKSPACE%
+            echo $env:GITHUB_SHA
+            echo $env:GITHUB_REPOSITORY
+            echo $env:GITHUB_WORKSPACE
