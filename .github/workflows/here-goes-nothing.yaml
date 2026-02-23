@@ -1,0 +1,16 @@
+name: here-goes-nothing
+on: [push]
+jobs:
+  checkout-and-run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple JS actions
+        run: ls -la
+      - name: Checkout code
+        run: |
+          git init
+          git remote add origin "https://github.com/fmxsolutions/github-actions.git"
+          git fetch --depth=1 origin main
+          git checkout main
+      - name: List files after checkout
+        run: ls -la
