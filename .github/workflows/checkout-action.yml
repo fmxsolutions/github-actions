@@ -9,4 +9,8 @@ jobs:
       - name: use checkout action
         uses: actions/checkout@v3
       - name: list files after checkout
+<<<<<<< HEAD
         run: ls -la
+=======
+        run: ls -la
+>>>>>>> a2b75e685f46abed4490d8a4555478ec26ba94e7

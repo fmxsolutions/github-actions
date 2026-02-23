@@ -1,0 +1,13 @@
+name: Use a simple action
+on: [push]
+jobs:
+  checkout-and-run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple JS actions
+        id: greet
+        uses: fmxsolutions/hello-world-javascript-action@main
+        with:
+          who-to-greet: "Hello World"
+      - name: log output message
+        run: echo "${{steps.greet.outputs.time}}"
