@@ -1,0 +1,12 @@
+name: Use a preset Checkout action from marketplace
+on: [push]
+jobs:
+  checkout-and-run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list files before checkout
+        run: ls -la
+      - name: use checkout action
+        uses: actions/checkout@v3
+      - name: list files after checkout
+        run: ls -la
