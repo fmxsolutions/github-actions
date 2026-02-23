@@ -60,14 +60,14 @@ jobs:
                                 },
                                 {
                                     "key": "runner context",
-                                    "value": "${{ toJSON(runner) }}"
+                                    "value": "${{ runner.os }} - ${{ runner.arch }} - ${{ runner.name }}"
                                 },
                                 {
                                     "key": "env context",
                                     "value": "my_env_context"
                                 }
                         ],
-                        "data": {"comment" : "test 11"
+                        "data": {"comment" : "test 12"
                         }
                     }
                   } 
