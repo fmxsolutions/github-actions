@@ -57,14 +57,14 @@ jobs:
                                 },
                                 {
                                     "key": "runner context",
-                                    "value": "my_runner_context"
+                                    "value": "${{ runner }}"
                                 },
                                 {
                                     "key": "env context",
                                     "value": "my_env_context"
                                 }
                         ],
-                        "data": {"comment" : "test 6"
+                        "data": {"comment" : "test 10"
                         }
                     }
                   } 
