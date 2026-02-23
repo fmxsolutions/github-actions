@@ -64,7 +64,7 @@ jobs:
                                 "value": "${{ toJson(env) }}"
                             }
                     ],
-                    "data": {"comment" : "test 2"
+                    "data": {"comment" : "test 3"
                     }
                     }
                     }
