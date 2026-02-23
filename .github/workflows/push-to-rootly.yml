@@ -1,0 +1,56 @@
+name: push a build as a pulse to rootly
+on: [push]
+jobs:
+  create-a-rootly-pulse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create a POST request to rootly API
+        run: |
+          curl -X POST https://api.rootly.com/v1/pulses \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer ${{ secrets.ROOTLY_GLOBAL1 }}" \
+          -d '{
+                "data": {
+                    "type": "pulses",
+                    "attributes": {
+                    "summary": "New Deployment",
+                    "source": "FMX GitHub Actions",
+                    "service_ids": [
+                        "github_test"
+                    ],
+                    "environment_ids": [
+                        "DEV"
+                    ],
+                    "started_at": "2023-11-07T06:37:56Z",
+                    "ended_at": "2023-11-07T06:39:50Z",
+                    "external_url": "https://github.com/fmxsolutions/github-actions/actions/runs/22311444747/job/64544366284",
+                    "labels": [
+                        {
+                        "key": "REPO",
+                        "value": "fmxsolutions/github-actions"
+                        },
+                        {
+                            "key": "BRANCH",
+                            "value": "main"
+                            },
+                            {
+                                "key": "COMMIT",
+                                "value": "9875hjf747864"  
+                            },
+                            {
+                                "key": "OUTCOME",
+                                "value": "SUCCESS"
+                            }
+                    ],
+                    "refs": [
+                        {
+                        "key": "PUSH_REF",
+                        "value": "dflgkfg75hd7864576534g"
+                        }
+                    ],
+                    "data": {"comment" : "test 2"
+                    }
+                    }
+                    }
+                }'
+      
