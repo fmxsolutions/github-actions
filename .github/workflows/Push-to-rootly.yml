@@ -10,7 +10,7 @@ jobs:
           -H "Content-Type: application/json" \
           -H "Authorization: Bearer ${{ secrets.ROOTLY_GLOBAL1 }}" \
           -d '{
-                "data": {
+               "data": {
                     "type": "pulses",
                     "attributes": {
                         "summary": "New Deployment",
@@ -43,13 +43,29 @@ jobs:
                                 }
                         ],
                         "refs": [
+                            {
+                            "key": "github context",
+                            "value": "my_github_context"
+                            },
+                            {
+                                "key": "job context",
+                                "value": "my_job_context"
+                                },
+                                {
+                                    "key": "steps context",
+                                    "value": "my_steps_context"
+                                },
                                 {
                                     "key": "runner context",
-                                    "value": "${{ toJson(runner) }}"
+                                    "value": "my_runner_context"
+                                },
+                                {
+                                    "key": "env context",
+                                    "value": "my_env_context"
                                 }
                         ],
-                        "data": {"comment" : "test 8"
+                        "data": {"comment" : "test 6"
                         }
                     }
-                  }
-             }'     
+                  } 
+                }'     
