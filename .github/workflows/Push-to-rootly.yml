@@ -4,6 +4,9 @@ jobs:
   create-a-rootly-pulse:
     runs-on: ubuntu-latest
     steps:
+      - name: show runner configuration
+        run: |
+          echo "runner context: ${{ toJSON(runner) }}" 
       - name: create a POST request to rootly API
         run: |
           curl -X POST https://api.rootly.com/v1/pulses \
