@@ -13,60 +13,59 @@ jobs:
                 "data": {
                     "type": "pulses",
                     "attributes": {
-                    "summary": "New Deployment",
-                    "source": "FMX GitHub Actions",
-                    "service_ids": [
-                        "github_test"
-                    ],
-                    "environment_ids": [
-                        "DEV"
-                    ],
-                    "started_at": "2023-11-07T06:37:56Z",
-                    "ended_at": "2023-11-07T06:39:50Z",
-                    "external_url": "https://github.com/fmxsolutions/github-actions/actions/runs/22311444747/job/64544366284",
-                    "labels": [
-                        {
-                        "key": "REPO",
-                        "value": "fmxsolutions/github-actions"
-                        },
-                        {
-                            "key": "BRANCH",
-                            "value": "main"
+                        "summary": "New Deployment",
+                        "source": "FMX GitHub Actions",
+                        "service_ids": [
+                            "github_test"
+                        ],
+                        "environment_ids": [
+                            "DEV"
+                        ],
+                        "started_at": "2023-11-07T06:37:56Z",
+                        "ended_at": "2023-11-07T06:39:50Z",
+                        "external_url": "https://github.com/fmxsolutions/github-actions/actions/runs/22311444747/job/64544366284",
+                        "labels": [
+                            {
+                            "key": "REPO",
+                            "value": "fmxsolutions/github-actions"
                             },
                             {
-                                "key": "COMMIT",
-                                "value": "9875hjf747864"  
+                                "key": "BRANCH",
+                                "value": "main"
+                                },
+                                {
+                                    "key": "COMMIT",
+                                    "value": "9875hjf747864"  
+                                },
+                                {
+                                    "key": "OUTCOME",
+                                    "value": "SUCCESS"
+                                }
+                        ],
+                        "refs": [
+                            {
+                            "github context": ,
+                            "value": "${{ toJson(github) }}"
                             },
                             {
-                                "key": "OUTCOME",
-                                "value": "SUCCESS"
-                            }
-                    ],
-                    "refs": [
-                        {
-                        "github context": ,
-                        "value": "${{ toJson(github) }}"
-                        },
-                        {
-                            "job context": ,
-                            "value": "${{ toJson(job) }}"
-                            },
-                            {
-                                "steps context": ,
-                                "value": "${{ toJson(steps) }}"
-                            },
-                            {
-                                "runner context": ,
-                                "value": "${{ toJson(runner) }}"
-                            },
-                            {
-                                "env context": ,
-                                "value": "${{ toJson(env) }}"
-                            }
-                    ],
-                    "data": {"comment" : "test 3"
+                                "job context": ,
+                                "value": "${{ toJson(job) }}"
+                                },
+                                {
+                                    "steps context": ,
+                                    "value": "${{ toJson(steps) }}"
+                                },
+                                {
+                                    "runner context": ,
+                                    "value": "${{ toJson(runner) }}"
+                                },
+                                {
+                                    "env context": ,
+                                    "value": "${{ toJson(env) }}"
+                                }
+                        ],
+                        "data": {"comment" : "test 3"
+                        }
                     }
-                    }
-                    }
-                }'
-      
+                }
+             }'     
