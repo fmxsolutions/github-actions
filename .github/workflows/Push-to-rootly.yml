@@ -44,23 +44,23 @@ jobs:
                         ],
                         "refs": [
                             {
-                            "github context": ,
+                            "key": "github context",
                             "value": "${{ toJson(github) }}"
                             },
                             {
-                                "job context": ,
+                                "key": "job context",
                                 "value": "${{ toJson(job) }}"
                                 },
                                 {
-                                    "steps context": ,
+                                    "key": "steps context",
                                     "value": "${{ toJson(steps) }}"
                                 },
                                 {
-                                    "runner context": ,
+                                    "key": "runner context",
                                     "value": "${{ toJson(runner) }}"
                                 },
                                 {
-                                    "env context": ,
+                                    "key": "env context",
                                     "value": "${{ toJson(env) }}"
                                 }
                         ],
